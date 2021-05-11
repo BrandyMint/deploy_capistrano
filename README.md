@@ -1,2 +1,5 @@
 # deploy_capistrano
-Adds Capistrano deployment settings to Rails project
+
+Install
+
+> curl -fsSL https://github.com/brandymint/raw/main/bin/install | bash

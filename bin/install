@@ -1,0 +1,5 @@
+#!/bin/bash
+# Usage: rbenv doctor
+# Summary: Detects common problems in rbenv installation
+
+echo "Hello'
