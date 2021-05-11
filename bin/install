@@ -23,6 +23,9 @@ cp -r ${tmp_dir}/deploy_capistrano-main/app/* .
 cat Gemfile.deploy >> Gemfile
 rm Gemfile.deploy
 
+cat README.md.deploy >> README.md
+rm README.md.deploy
+
 echo "Clean temporary files"
 rm -fr $TEMP
 rm -fr $tmp_dir
