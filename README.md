@@ -10,3 +10,8 @@
 # Install
 
 > curl -fsSL https://github.com/brandymint/deploy_capistrano/raw/main/bin/install | bash
+
+# Config
+
+1. Set :app and :repo_url in config/deploy.rb
+2. Follow Deployment section in README.md
