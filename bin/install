@@ -2,4 +2,23 @@
 # Usage: rbenv doctor
 # Summary: Detects common problems in rbenv installation
 
-echo 'Hello'
+set -e
+[ -n "$BRANDYMINT_DEBUG" ] && set -x
+
+ARCHIVE=https://github.com/BrandyMint/deploy_capistrano/archive/refs/heads/main.zip
+TEMP=/tmp/deploy_capistrano.zip
+tmp_dir=$(mktemp -d -t deploy_capistrano-XXXXXXXXXXXX)
+
+echo "Download ${ARCHIVE}"
+
+curl -fsSL ${ARCHIVE} > $TEMP
+
+echo "Unzip archive to ${tmp_dir}"
+
+unzip $TEMP -d ${tmp_dir}
+
+echo "Clean temporary files"
+rm -fr $TEMP
+rm -fr $tmp_dir
+
+echo "Done"
